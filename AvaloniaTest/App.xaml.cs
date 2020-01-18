@@ -9,6 +9,7 @@ namespace AvaloniaTest
         public override void Initialize()
         {
             AvaloniaXamlLoader.Load(this);
+           
         }
 
         public override void OnFrameworkInitializationCompleted()
@@ -16,6 +17,7 @@ namespace AvaloniaTest
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
                 desktop.MainWindow = new MainWindow();
+                desktop.MainWindow.DataContext = new MainWindowViewModel();
             }
 
             base.OnFrameworkInitializationCompleted();

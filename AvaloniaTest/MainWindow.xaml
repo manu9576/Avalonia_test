@@ -10,8 +10,9 @@
 
     <TextBox Grid.Row="1" Grid.Column="1">Coucou</TextBox>
 
-    <Button Grid.Row="2" Grid.Column="1">Hello World!</Button>
+        <Button Grid.Row="2" Grid.Column="1" Command="{Binding ActionButton}">RAZ Count</Button>
 
-    <TextBlock Name="tb_Text"/>
+    <TextBlock Grid.Row="3" Grid.Column="1" Name="tb_Text" Text="{Binding Text}"/>
+      
   </Grid>
 </Window>

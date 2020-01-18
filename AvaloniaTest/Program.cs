@@ -2,6 +2,7 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Logging.Serilog;
+using Avalonia.ReactiveUI;
 
 namespace AvaloniaTest
 {
@@ -15,8 +16,13 @@ namespace AvaloniaTest
 
         // Avalonia configuration, don't remove; also used by visual designer.
         public static AppBuilder BuildAvaloniaApp()
-            => AppBuilder.Configure<App>()
-                .UsePlatformDetect()
-                .LogToDebug();
+        {
+
+
+            return AppBuilder.Configure<App>()
+                           .UsePlatformDetect()
+                           .LogToDebug()
+                           .UseReactiveUI();
+        }
     }
 }
